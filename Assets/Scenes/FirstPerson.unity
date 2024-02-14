@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 605667309}
   - component: {fileID: 605667308}
   - component: {fileID: 605667310}
+  - component: {fileID: 605667311}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -782,6 +783,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: {x: 0.2, y: 0.2}
+  xRotationLimit: 80
+--- !u!114 &605667311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605667306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5938794490908d24ab527f54c8d5a848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  jumpForce: 28
+  gravityMultiplier: 4
 --- !u!43 &732770122
 Mesh:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class LookController : MonoBehaviour
   [SerializeField]
   Vector2 sensitivity = Vector2.one;
 
+  [SerializeField]
+  float xRotationLimit = 80;
+
   GameObject head;
   float xRotation = 0;
 
@@ -25,6 +28,7 @@ public class LookController : MonoBehaviour
 
     float xDegrees = lookVector.y * sensitivity.y;
     xRotation += xDegrees;
+    xRotation = Mathf.Clamp(xRotation, -xRotationLimit, xRotationLimit);
     head.transform.localEulerAngles = new(-xRotation, 0, 0);
 
   }
